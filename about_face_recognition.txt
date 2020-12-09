@@ -1,0 +1,33 @@
+import face_recognition as fr
+import cv2
+import numpy as np
+
+
+
+1/ IMPORTING THE IMAGE: (as numpy array)
+
+img = fr.load_image_file("path-to-image")
+
+2/ CONVERTING IT TO RGB:
+
+img = cv2.cvtColor(imgperson, cv2.COLOR_BGR2RGB)
+
+3/ GETTING A LIST CONTAINING THE COORDINATES OF THE RECTANGLE AROUND A FACE: (top, right, bottom, left)
+
+face_location = fr.face_locations(img)[0]
+
+# face_locations returns a list of rectangles around all faces detected. Hence the indexing [0]
+
+
+4/ GETTING THE ENCODING:
+
+face_encoding = fr.face_encodings(img)[0]
+
+# face_encoding is a 128-dimensional numpy array.
+"""
+    For face recognition, the algorithm notes certain important measurements on
+    the face — like the color and size and slant of eyes, the gap between
+    eyebrows, etc. All these put together define the face encoding — the
+    information obtained out of the image — that is used to identify the
+    particular face.
+"""
