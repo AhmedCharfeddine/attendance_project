@@ -1,4 +1,3 @@
-# attendance_project
-projet semestriel: 
-basic.py n'est pas en realtion avec le travail final.
-il compare deux visages dans le dossier img: dessine un rectangle et retourne s'il sont sont semblables
+# STUDENT ATTENDANCE
+## Semestrial project
+project that utilises the face_recognition python library to help teachers/instructors manage the attendance of their students.
